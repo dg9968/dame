@@ -18,4 +18,4 @@
 
 config/database.yml
 config/secrets.yml
-config/applications.yml
+config/application.yml
