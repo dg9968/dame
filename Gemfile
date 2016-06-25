@@ -50,5 +50,7 @@ group :development do
 # Add this if you're using rbenv
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
   gem 'bootstrap-sass', '~> 3.3.6'
+  gem 'autoprefixer-rails'
+  gem 'sprockets'
 end
 
