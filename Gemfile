@@ -49,6 +49,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.1'
 # Add this if you're using rbenv
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
+  gem 'sass', '~> 3.2'
   gem 'bootstrap-sass', '~> 3.3.6'
   gem 'autoprefixer-rails'
   gem 'sprockets'
