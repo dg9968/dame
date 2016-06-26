@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'navigation/taxes'
+
   get 'navigation/about'
 
   get 'navigation/contact'
@@ -27,7 +29,7 @@ Rails.application.routes.draw do
   get 'about' => 'navigation#about'
   get 'services' => 'navigation#services'
   get 'contact' => 'navigation#contact'
-  
+  get 'taxes' => 'navigation#taxes'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

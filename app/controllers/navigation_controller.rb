@@ -1,4 +1,5 @@
 class NavigationController < ApplicationController
+
   def about
   end
 
@@ -7,5 +8,8 @@ class NavigationController < ApplicationController
   end
 
   def services
+  end
+
+  def taxes
   end
 end

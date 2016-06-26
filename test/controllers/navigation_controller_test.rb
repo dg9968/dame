@@ -16,4 +16,8 @@ class NavigationControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get taxes" do
+    get :taxes
+    assert_response :success
+  end
 end
