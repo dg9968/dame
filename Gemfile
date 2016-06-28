@@ -55,6 +55,6 @@ group :development do
   gem 'autoprefixer-rails'
   gem 'sprockets'
   gem 'mailgun-ruby'
-  gem 'mailgun_rails'
+  gem 'mailgun_rails', '~> 0.8.0'
 end
 
