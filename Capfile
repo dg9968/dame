@@ -25,6 +25,7 @@ require 'capistrano-passenger'
 
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
+require 'mailgun-ruby'
 require 'mailgun_rails'
 # If you are using rbenv add these lines:
 require 'capistrano/rbenv'
