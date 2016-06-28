@@ -208,7 +208,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mailgun-ruby
-  mailgun_rails (~> 0.8.0)
+  mailgun_rails
   mysql2
   rails (= 4.2.6)
   sass (~> 3.2)
