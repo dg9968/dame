@@ -77,10 +77,10 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :mailgun
   # SMTP settings for gmail
 
-  config.action_mailer.smtp_settings = {
+  config.action_mailer.mailgun_settings = {
     :api_key              => ENV['api_key'],
     :domain               => ENV['domain']
   }
