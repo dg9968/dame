@@ -54,6 +54,7 @@ group :development do
   gem 'bootstrap-sass', '~> 3.3.6'
   gem 'autoprefixer-rails'
   gem 'sprockets'
-  gem 'mailgun-rails'
+  gem 'mailgun'
+  gem 'mailgun_rails'
 end
 

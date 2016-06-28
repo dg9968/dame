@@ -2,7 +2,7 @@
 lock '3.4.1'
 
 set :application, 'dame'
-set :repo_url, 'git@github.com:me/dame.git'
+set :repo_url, 'git@github.com:dg9968/dame.git'
 
 set :deploy_to, '/home/deploy/dame'
 
