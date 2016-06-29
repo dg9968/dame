@@ -12,8 +12,8 @@ class UserMailer < ApplicationMailer
     	mail({
       		:from    => ENV['dame_username'],
       		:to      => @user.email,
-      		:subject => "Sample Mail using Mailgun API.",
-      		:text    => "This mail is sent using Mailgun API via mailgun-ruby."
+      		:subject => "Welcome",
+      		:text    => "You have successfully submitted your inquiry"
     	})
   	end
 
