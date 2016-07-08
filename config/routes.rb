@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'services' => 'navigation#services'
   get 'contact' => 'navigation#contact'
   get 'taxes' => 'navigation#taxes'
+  get 'signup' => 'users#new'
   resources :users
 
 
