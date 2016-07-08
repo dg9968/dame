@@ -1,19 +1,6 @@
 Rails.application.routes.draw do
-  get 'navigation/taxes'
-
-  get 'navigation/about'
-
-  get 'navigation/contact'
-
-  get 'navigation/services'
-
-  get 'homepage/index'
-
-  get 'navigation/contact'
-
-  get 'navigation/about'
-
-  resources :users
+  
+  resources :prospects
   resources :test, :controller => "admin/navigation"
 
   # get 'homepage/index'
@@ -30,6 +17,7 @@ Rails.application.routes.draw do
   get 'services' => 'navigation#services'
   get 'contact' => 'navigation#contact'
   get 'taxes' => 'navigation#taxes'
+  resources :users
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

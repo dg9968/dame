@@ -22,28 +22,12 @@
         <!-- Content Row -->
         <div class="row">
       
-            <div class="col-sm-7">
-             <p id="notice"><%= notice %></p>
-
-			<p>
-  			<strong>Name:</strong>
-  			<%= @user.name %>
-			</p>
-
-			<p>
-  			<strong>Phone:</strong>
-  			<%= @user.phone %>
-			</p>
-
-			<p>
-  			<strong>Email:</strong>
-  			<%= @user.email %>
-			</p>
-
-			<p>
-  			<strong>Message:</strong>
-  			<%= @user.message %>
-			</p>
+        <div class="col-sm-7">
+            <% provide(:title, @user.name) %>
+            <h1>
+                <%= gravatar_for @user %>
+                <%= @user.name %>
+            </h1>
         </div>       
         <!-- Contact Details Column -->
         <div class="col-sm-5">

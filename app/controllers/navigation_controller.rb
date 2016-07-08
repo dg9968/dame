@@ -4,7 +4,7 @@ class NavigationController < ApplicationController
   end
 
   def contact
-  	@user = User.new
+  	@prospect = Prospect.new
   end
 
   def services
