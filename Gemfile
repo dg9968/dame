@@ -31,6 +31,10 @@ gem 'mailgun_rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.11'
+gem 'sass', '~> 3.2'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
+gem 'sprockets'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -42,10 +46,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem 'sass', '~> 3.2'
-  gem 'bootstrap-sass', '~> 3.3.6'
-  gem 'autoprefixer-rails'
-  gem 'sprockets'
+
 end
 
 
