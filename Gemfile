@@ -41,6 +41,11 @@ gem 'bcrypt', '~> 3.1.11'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'sass', '~> 3.2'
+  gem 'bootstrap-sass', '~> 3.3.6'
+  gem 'autoprefixer-rails'
+  gem 'sprockets'
 end
 
 
@@ -57,10 +62,7 @@ group :development do
 # Add this if you're using rbenv
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
   gem 'capistrano-passenger'
-  gem 'sass', '~> 3.2'
-  gem 'bootstrap-sass', '~> 3.3.6'
-  gem 'autoprefixer-rails'
-  gem 'sprockets'
+ 
 
 end
 
