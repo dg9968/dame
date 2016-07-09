@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  
   get 'users/new'
 
   get 'users/new'
@@ -22,6 +23,9 @@ Rails.application.routes.draw do
   get 'contact' => 'navigation#contact'
   get 'taxes' => 'navigation#taxes'
   get 'signup' => 'users#new'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   resources :users
 
 
