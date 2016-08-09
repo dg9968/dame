@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   
   get 'users/new'
 
-  get 'users/new'
-
   resources :prospects
   resources :test, :controller => "admin/navigation"
 
