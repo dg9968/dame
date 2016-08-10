@@ -25,8 +25,8 @@
                             <li><a href="#"><span class="fa fa-fw fa-laptop"></span> Quickbooks Setup</a></li> 
                         </ul>
                    </li>
-                   <li class="<%= is_active?('/contactus.html') %>"><a href="/contact.html">Contact</a></li>
-                   <li class="<%= is_active?('/taxes.html') %>"><a href="/taxes.html">Tax Resources</a></li>
+                   <li class="<%= is_active?('/contactus.html') %>"><a href="/contact">Contact</a></li>
+                   <li class="<%= is_active?('/taxes.html') %>"><a href="/taxes">Tax Resources</a></li>
                       <% if logged_in? %>
                         <li><%= link_to "Users", users_new_path %></li>
                         <li class="dropdown">
@@ -35,7 +35,7 @@
                             </a>
                         <ul class="dropdown-menu">
                             <li><%= link_to "Profile", current_user %></li>
-                            <li><%= link_to "Settings", '#' %></li>
+                            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                             <li class="divider"></li>
                             <li>
                             <%= link_to "Log out", logout_path, method: "delete" %>
