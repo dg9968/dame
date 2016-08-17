@@ -1,22 +1,23 @@
 class UserMailer < ApplicationMailer
-	default from: 'postmaster@mg.dameconsulting.us'
 
-	def welcome_email(user)
-		@user = user
-		@url = 'http://dameconsulting.us/contact'
-		mail(to: @user.email, subject: 'Welcome to Our Awesome Site')
-	end
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.user_mailer.account_activation.subject
+  #
+  def account_activation(user)
+    @user=user
+    mail to: user.email, subject: "Account activation"
+  end
 
-	def sample_email(user)
-    	@user = user
-    	mail({
-      		:from    => ENV['dame_username'],
-      		:to      => @user.email,
-      		:subject => "Welcome",
-      		:text    => "You have successfully submitted your inquiry"
-    	})
-  	end
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.user_mailer.password_reset.subject
+  #
+  def password_reset
+    @greeting = "Hi"
 
-  	
-
+    mail to: "to@example.org"
+  end
 end
