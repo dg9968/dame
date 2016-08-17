@@ -26,4 +26,10 @@ test:
   <<: *default
   database: dame_development
 
+development:
+  <<: *default
+  database: dame_development
+
+
+
 
