@@ -126,6 +126,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    pg (0.18.4)
     pkg-config (1.1.7)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -230,6 +231,7 @@ DEPENDENCIES
   mailgun-ruby
   mailgun_rails
   mysql2
+  pg (= 0.18.4)
   rails (= 5.0.0)
   rails-controller-testing
   sass (~> 3.3.4)
