@@ -14,8 +14,9 @@ default: &default
   socket: /var/run/mysqld/mysqld.sock
   timeout: 5000
 
-development:
-  <<: *default
+production:
+  adapter: postgresql
+  encoding: unicode
   database: dame_development
 
 # Warning: The database defined as "test" will be erased and
@@ -25,7 +26,4 @@ test:
   <<: *default
   database: dame_development
 
-production:
-  <<: *default
-  database: dame_development
 
