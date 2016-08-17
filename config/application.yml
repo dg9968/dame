@@ -1,0 +1,19 @@
+defaults: &defaults
+  email: postmaster@dameconsulting.us
+  secret: foo123
+
+development:
+  api_key: key-32ce929b2395a2c57862c8aa8f8b69a1
+  domain: mg.dameconsulting.us
+  dame_username: Dame Consulting <postmaster@dameconsulting.us>
+
+test:
+  <<: *defaults
+  email: test@example.com
+
+production:
+  <<: *defaults
+  api_key: key-32ce929b2395a2c57862c8aa8f8b69a1
+  domain: mg.dameconsulting.us
+  dame_username: postmaster@dameconsulting.us
+
