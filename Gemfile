@@ -40,6 +40,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'sprockets'
 gem 'rails-controller-testing'
+gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
