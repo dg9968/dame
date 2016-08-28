@@ -85,6 +85,6 @@ Rails.application.configure do
     :api_key              => ENV['api_key'],
     :domain               => ENV['domain']
   }
-  host = 'serene-retreat-55282.herokuapp.com'
+  host = 'www.dameconsulting.us'
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 end

@@ -38,13 +38,10 @@ gem 'mini_magick',             '4.5.1'
 gem 'fog',                     '1.38.0'
 
 gem 'bootstrap-will_paginate', '0.0.10'
-
-gem 'sass', '~> 3.3.4'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'autoprefixer-rails'
-gem 'sprockets'
+
 gem 'rails-controller-testing'
-gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -85,7 +82,6 @@ group :development do
 # Add this if you're using rbenv
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
   gem 'capistrano-passenger'
- 
-
+  
 end
 
