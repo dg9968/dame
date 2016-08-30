@@ -85,6 +85,6 @@ Rails.application.configure do
     :api_key              => ENV['api_key'],
     :domain               => ENV['domain']
   }
-  host = 'www.dameconsulting.us'
+  host = 'www.dameconsulting.com'
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 end
