@@ -1,7 +1,7 @@
 <% provide(:title, @user.name) %>
 <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Porfile
+                <h1 class="page-header">Profile
                     <small>Primary contact</small>
                 </h1>
                 <ol class="breadcrumb">
@@ -36,9 +36,9 @@
             <th scope="row">Primary</th>
               <td><%= @user.name %></td>
               <td><%= @user.email %></td>
-              <td><%= @user.address.line1 %> 
-                    <%= @user.address.line2 %><br>
-                  <%= @user.address.city %><br>
+              <td><%= @user.address.line1   %> 
+                  <%= @user.address.line2 %><br>
+                  <%= @user.address.city%><br>
                   <%= @user.address.state %><br>
                   <%= @user.address.zip %></td>
           </tr>

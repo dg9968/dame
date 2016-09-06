@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.build_address
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
@@ -75,7 +74,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, address_attributes: [:line1, :line2, :city, :state, :zip, :addressable_id])
+                                   :password_confirmation, address_attributes: [:line1, :line2, :city, :state, :zip])
     end
 
     # Confirms the correct user.
