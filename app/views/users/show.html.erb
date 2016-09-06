@@ -1,24 +1,63 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-4">
-    <section>
+            <div class="col-lg-12">
+                <h1 class="page-header">Porfile
+                    <small>Primary contact</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>Home</a>
+                    </li>
+                    <li class="active">About</li>
+                </ol>
+            </div>
+</div>    
+<section>
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
     </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
+    <section>
+      <p>It is important to make sure your contact information is current, take a moment to verify its accuracy</p>
+    
     </section>
-  </aside>
-  <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-  </div>
+    <section>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Primary</th>
+              <td><%= @user.name %></td>
+              <td><%= @user.email %></td>
+              <td><%= @user.address.line1 %> 
+                    <%= @user.address.line2 %><br>
+                  <%= @user.address.city %><br>
+                  <%= @user.address.state %><br>
+                  <%= @user.address.zip %></td>
+          </tr>
+          <tr>
+            <th scope="row">Spouse</th>
+              <td>Evelina</td>
+              <td>Galindo</td>
+              <td>evecarmen</td>
+          </tr>
+          <tr>
+            <th scope="row">Dependent</th>
+              <td colspan="2">Manuel</td>
+              <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+     
+     </section>
+
+ 
+
 </div>

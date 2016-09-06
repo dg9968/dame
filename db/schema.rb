@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826231001) do
+ActiveRecord::Schema.define(version: 20160905185025) do
+
+  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "line1"
+    t.string   "line2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", unique: true, using: :btree
+  end
 
   create_table "microposts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535
@@ -38,6 +51,15 @@ ActiveRecord::Schema.define(version: 20160826231001) do
     t.index ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
     t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
     t.index ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
+  end
+
+  create_table "taxpayers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "content",    limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "attachment"
+    t.index ["user_id", "created_at"], name: "index_taxpayers_on_user_id_and_created_at", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

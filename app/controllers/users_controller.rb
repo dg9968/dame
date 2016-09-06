@@ -10,14 +10,17 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    @taxpayers = @user.taxpayers.paginate(page: params[:page])
   end
 
   def new
   	@user = User.new
-  end
+    @user.build_address
+   end
 
   def create
     @user = User.new(user_params)
+    @user.build_address
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
@@ -30,10 +33,13 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+    @user.build_address
   end
   
   def update
     @user = User.find(params[:id])
+   
+
     if @user.update_attributes(user_params)
       # Handle a successful update.
       flash[:success] = "Profile updated"
@@ -69,7 +75,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, address_attributes: [:line1, :line2, :city, :state, :zip, :addressable_id])
     end
 
     # Confirms the correct user.

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+ 
   resources :prospects
   resources :test, :controller => "admin/navigation"
 
@@ -27,10 +27,14 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+  resources :users do
+    resources :taxpayers
+  end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
+  resources :taxpayers, only: [:index, :new, :create, :destroy]
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

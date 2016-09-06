@@ -68,6 +68,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "associated taxpayers should be destroyed" do
+    @user.save
+    @user.taxpayers.create!(content: "Lorem ipsum")
+    assert_difference 'Taxpayer.count', -1 do
+      @user.destroy
+    end
+  end
+
   test "should follow and unfollow a user" do
     michael = users(:michael)
     archer  = users(:archer)
