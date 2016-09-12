@@ -20,6 +20,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+<<<<<<< HEAD
+=======
+   
+>>>>>>> tax-information
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
@@ -32,13 +36,11 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-    @user.build_address
   end
   
   def update
     @user = User.find(params[:id])
    
-
     if @user.update_attributes(user_params)
       # Handle a successful update.
       flash[:success] = "Profile updated"

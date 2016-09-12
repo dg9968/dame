@@ -6,6 +6,12 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
+Address.create!(line1: "9968 SW 222nd Terrace",
+                city: "Cutler Bay",
+                state: "FL",
+                zip: "33190",
+                :addressable => User.find(1))
+
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -16,6 +22,13 @@ User.create!(name:  "Example User",
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now)
+  address = Faker::Address
+  Address.create!(line1: address.street_address,
+                line2: address.secondary_address,
+                city: address.city,
+                state: address.state,
+                zip: address.state,
+                :addressable => User.find(n+2))
 end
 
 users = User.order(:created_at).take(6)
@@ -32,3 +45,4 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+

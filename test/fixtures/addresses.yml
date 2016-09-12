@@ -1,17 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  line1: MyString
-  line2: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  user: one
+address_michael:
+  addressable: michael (User)
 
-two:
-  line1: MyString
-  line2: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  user: two

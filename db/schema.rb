@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 20160905185025) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.integer  "addressable_id"
     t.string   "addressable_type"
+    t.integer  "addressable_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", unique: true, using: :btree
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", using: :btree
   end
 
   create_table "microposts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
