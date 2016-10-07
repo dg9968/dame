@@ -2,4 +2,8 @@
 
 address_michael:
   addressable: michael (User)
-
+  line1: Bosque de Rio Frio 17
+  line2: La Herradura
+  city: Huixquilucan
+  state: Estado de Mexico
+  zip: 33100

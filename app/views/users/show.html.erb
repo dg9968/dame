@@ -15,51 +15,24 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-        
+
       </h1>
     </section>
 
     <section>
       <p>It is important to make sure your contact information is current, take a moment to verify its accuracy</p>
-    
-    </section>
-    <section>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Address</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Primary</th>
-              <td><%= @user.name %></td>
-              <td><%= @user.email %></td>
-              <td><%= @user.address.line1   %> 
-                  <%= @user.address.line2 %><br>
-                  <%= @user.address.city%><br>
-                  <%= @user.address.state %><br>
-                  <%= @user.address.zip %></td>
-          </tr>
-          <tr>
-            <th scope="row">Spouse</th>
-              <td>Evelina</td>
-              <td>Galindo</td>
-              <td>evecarmen</td>
-          </tr>
-          <tr>
-            <th scope="row">Dependent</th>
-              <td colspan="2">Manuel</td>
-              <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-     
-     </section>
 
- 
-
-</div>
+  <h3>Address</h3>
+    <% if @user.address.nil? %>
+      
+      <%= render partial: "addresses/form", locals: {addressable: @user} %>
+    <% else %>
+      <%= form_for @user, :html => {:class => "form-horizontal"} do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.fields_for :address do |address| %>
+          <%= render :partial => 'shared/address', :locals => {:f => address} %>
+          <% end %>
+          <%= f.submit "Update my address", class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+  
