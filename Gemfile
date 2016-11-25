@@ -38,7 +38,8 @@ gem 'fog',                     '1.38.0'
 
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap-sass'
-
+gem 'rails-i18n', '~> 4.0.0'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'rails-controller-testing'
 
 
