@@ -1,5 +1,5 @@
     <% provide(:title, 'Home') %>
-<div class="col-xs-12 col-md-6">
+<div class="col-xs-6 col-md-6">
     <p><b><%= t('navigator.index.question_one') %></b></p>
     <p><%= t('navigator.index.answer_one') %></p>
     <p><b><%= t('navigator.index.question_two') %></b></p>
@@ -8,8 +8,6 @@
     <p><%= t('navigator.index.answer_three') %></p>
 </div>
 
-<div class="col-xs-12 col-md-6">
-    <div class="thumbnail">
-        <%= image_tag("eve_trabajando.jpg", :alt => "Working") %>
-    </div>
+<div class="col-xs-6 col-md-6">
+    <%= image_tag("eve_trabajando.jpg", class: "img-responsive", :alt => "Working") %> 
 </div>
