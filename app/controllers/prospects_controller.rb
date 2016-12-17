@@ -1,6 +1,6 @@
 class ProspectsController < ApplicationController
   before_action :set_prospect, only: [:show, :edit, :update, :destroy]
-
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:create, :show]
   # GET /prospects
   # GET /prospects.json
   def index
@@ -10,6 +10,7 @@ class ProspectsController < ApplicationController
   # GET /prospects/1
   # GET /prospects/1.json
   def show
+    @prospect = Prospect.find(params[:id])
   end
 
   # GET /prospects/new
@@ -28,7 +29,7 @@ class ProspectsController < ApplicationController
 
     respond_to do |format|
       if @prospect.save
-        format.html { redirect_to @prospect, notice: 'Prospect was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Your contact information was successfully created.' }
         format.json { render :show, status: :created, location: @prospect }
       else
         format.html { render :new }

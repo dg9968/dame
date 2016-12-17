@@ -2,6 +2,11 @@
 
 <p>
   <strong>Name:</strong>
+  <%= @prospect.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
   <%= @prospect.name %>
 </p>
 
@@ -21,4 +26,4 @@
 </p>
 
 <%= link_to 'Edit', edit_prospect_path(@prospect) %> |
-<%= link_to 'Back', prospects_path %>
+<%= link_to 'About Us', prospects_path %>
