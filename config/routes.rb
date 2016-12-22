@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
  
+  resources :clients
   resources :prospects
   resources :test, :controller => "admin/navigation"
 
